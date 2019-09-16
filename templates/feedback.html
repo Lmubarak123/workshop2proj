@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+{% block content %}
+    <style>
+    b{
+        font-size: 20px;
+        color: lightslategrey;
+    }
+    </style>
+<div class="container">
+<div class="row">
+    {% if fdata %}
+    <h3>Your feedback are...</h3>
+    {% endif %}
+
+    {% if fdata %}
+        {% for i in fdata %}
+        {% if i.rating >= 6 and i.rating <= 10%}
+
+        <b>Name:{{ i.name|capfirst }}</b><br>
+        Rating:{{ i.rating }}<br>
+        FeedBack:{{ i.feedback }}<br><br>
+        {% endif %}
+        {% endfor %}
+    {% else %}
+        <h4>NO FeedBack Are Availble</h4>
+    {% endif %}
+<form method="POST">
+    {% csrf_token %}
+    <h3>Please Enter Your FeedBacks</h3>
+    {{ fform }}<br>
+    <center>
+        <input type="submit" value="Send" class="btn btn-success">
+        <input type="reset" value="clear" class="btn btn-danger">
+    </center>
+</form>
+
+</div>
+</div>
+    <h1>ug</h1>
+{% endblock %}
+
+</body>
+</html>
+

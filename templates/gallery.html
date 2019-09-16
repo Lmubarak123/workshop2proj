@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Gallery page
+    </title>
+</head>
+<body>
+{% block content %}
+    {% load staticfiles %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'images/img1.jpg' %}" style="width:500px; height:200px;">
+        </div>
+        <div class =col-md-6">
+            <img src="{% static 'images/img2.jpg' %}">
+        </div>
+
+    </div><br>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'images/img3.jpg' %}" style="width:300px; height:200px;">
+
+        </div>&nbsp;&nbsp;
+        <div class="col-md-3">
+            <img src="{% static 'images/img4.jpg' %}" style="width:300px; height:200px;">
+
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'images/img5.jpg' %}" style="width:300px; height:200px;">
+
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'images/img6.jpg' %}" style="width:500px; height:200px;">
+        </div>
+        <div class =col-md-6">
+            <img src="{% static 'images/img10.jpg' %}">
+        </div>
+
+    </div><br>
+    </div>
+
+
+
+
+
+{% endblock %}
+
+</body>
+</html>

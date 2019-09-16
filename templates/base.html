@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link href="{% static 'css/basc.css' %}" rel="stylesheet">
+
+</head>
+<body>
+<nav>
+    <ul class="menu">
+    <li class="menu_items"><a href="/home/">HOME</a> </li>
+    <li class="menu_items"><a href="/services/">SERVICES</a> </li>
+    <li class="menu_items"><a href="/equairy/">ENQUAIRY</a> </li>
+    <li class="menu_items"><a href="/gallery/">GALLERY</a> </li>
+    <li class="menu_items"><a href="/feedback/">FEEDBACK</a> </li>
+    </ul>
+</nav>
+<br>
+<center><h1 style="text-align: center; color: red;">Welcome to DurgaSoft</h1></center>
+{% block content %}
+
+{% endblock %}
+
+
+
+
+
+<footer>
+    <h4 id="footer1">&copy; CopyRight by Narayna sir</h4>
+</footer>
+</body>
+</html>

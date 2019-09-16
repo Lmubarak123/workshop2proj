@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact page</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+<div class="row">
+    <form method="post">
+        {% csrf_token %}
+        {{ eform }}<br>
+        <input type="submit" value="submit" class="btn btn-success">
+        <input  type="reset" value="clear" class="btn btn-dangour">
+    </form>
+</div>
+</div>
+{% endblock %}
+
+</body>
+</html>

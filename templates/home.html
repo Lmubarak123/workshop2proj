@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    body{
+        background-color:peachpuff;
+    }
+    h1{
+         border: 5px solid brown;
+        width:450px;
+        border-left-width: 30px;
+        border-right-width: 30px;
+        border-radius: 20px;
+        color: purple;
+        background-color: silver;
+        text-align: center;
+
+
+    }
+    h2{
+        border: 5px solid hotpink;
+        width:250px;
+        border-left-width: 30px;
+        border-radius: 20px;
+        color: purple;
+        background-color: silver;
+    }
+        p{
+
+            font-family:"Lucida Console";
+
+            color: chocolate;
+            font-size: xx-large;
+        }
+    </style>
+<h2 > About Organization</h2>
+    <p>hai this is mubarak hai this is mubarak hai this is mubarak hai this is mubarakv hai this is mubarak
+    </p>
+    <p>hai this is mubarakhai this is mubarakhai this is mubarakhai this is mubarakhai this is mubarak</p>
+    <h2 >About Founder</h2>
+    <p>this is founder this is founder this is founderthis is founder this is founder </p>
+    <p>this is founderthis is founderthis is founderthis is founderthis is founderthis is founder</p>
+{% endblock %}
+</body>
+</html>
